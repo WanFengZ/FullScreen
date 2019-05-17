@@ -1,0 +1,57 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#container,
+.sections,
+.section {
+    height: 100%;
+    position: relative;
+}
+
+.section {
+    background-color: #000;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.pages {
+    position: fixed;
+    list-style: none;
+}
+
+.vertical {
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.horizontal {
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%,0);
+}
+
+.pages li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.horizontal li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pages li.active {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #FFFE00;
+    background: none;
+    margin-left: 5px;
+}

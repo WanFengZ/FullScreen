@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/fullScreen.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <style>html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #container,
+    .sections,
+    .section {
+        height: 100%;
+        position: relative;
+    }
+
+    .section {
+        background-color: #000;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .pages {
+        position: fixed;
+        list-style: none;
+    }
+
+    .vertical {
+        right: 10px;
+        top: 50%;
+        transform: translate(0,-50%);
+    }
+
+    .horizontal {
+        left: 50%;
+        bottom: 10px;
+        transform: translate(-50%,0);
+    }
+
+    .pages li{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    .horizontal li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .pages li.active {
+        width: 14px;
+        height: 14px;
+        border: 2px solid #FFFE00;
+        background: none;
+        margin-left: 5px;
+    }
+        #section0 {
+            background-image: url(images/bg1.png);
+        }
+
+        #section1 {
+            background-image: url(images/bg2.png);
+        }
+
+        #section2 {
+            background-image: url(images/bg3.png);
+        }
+
+        #section3 {
+            background-image: url(images/bg4.png);
+        }
+    </style>
+</head>
+<body>
+    <div id="container" data-PageSwitch>
+        <div class="sections">
+            <div class="section left" id="section0"></div>
+            <div class="section left" id="section1"></div>
+            <div class="section left" id="section2"></div>
+            <div class="section left" id="section3"></div>
+        </div>
+    </div>
+    <script src="lib/jquery-1.12.4.js"></script>
+    <script src="../src/fullScreen.js"></script>
+    <script>
+        $(function(){
+            $('[data-PageSwitch]').FullScreen({
+
+            });
+        });
+    </script>
+</body>
+</html>
